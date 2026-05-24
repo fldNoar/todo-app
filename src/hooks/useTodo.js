@@ -1,4 +1,4 @@
-import {useCallback, useReducer} from "react";
+import {useReducer} from "react";
 import {todoActions} from "../utils/todo.actions";
 import {initialState, todoReducer} from "../utils/todo.reducer";
 
@@ -6,25 +6,25 @@ import {initialState, todoReducer} from "../utils/todo.reducer";
 export const useTodo = () => {
     const [state, dispatch] = useReducer(todoReducer, initialState);
 
-    const setInputValue = useCallback(value => {
+    const setInputValue = value => {
         dispatch(todoActions.setInput(value));
-    }, []);
+    };
 
-    const addTodo = useCallback(() => {
+    const addTodo = () => {
         dispatch(todoActions.addTodo())
-    }, []);
+    };
 
-    const toggleTodo = useCallback(id => {
+    const toggleTodo = id => {
         dispatch(todoActions.toggleTodo(id));
-    }, []);
+    };
 
-    const removeTodo = useCallback(id => {
+    const removeTodo = id => {
         dispatch(todoActions.removeTodo(id));
-    }, []);
+    };
 
-    const clearTodos = useCallback(() => {
+    const clearTodos = () => {
         dispatch(todoActions.clearTodos());
-    }, []);
+    };
 
     return {
         inputValue: state.inputValue,
