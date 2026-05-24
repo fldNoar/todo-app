@@ -1,5 +1,5 @@
 import React from 'react';
-import {useTodo} from "./customHooks/useTodo";
+import {useTodo} from "./hooks/useTodo";
 import NewTodo from "./components/NewTodo";
 import TodoList from "./components/TodoList";
 
