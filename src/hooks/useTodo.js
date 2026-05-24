@@ -1,6 +1,6 @@
 import {useCallback, useReducer} from "react";
-import {todoActions} from "../api/todo.actions";
-import {initialState, todoReducer} from "../api/todo.reducer";
+import {todoActions} from "../utils/todo.actions";
+import {initialState, todoReducer} from "../utils/todo.reducer";
 
 
 export const useTodo = () => {
